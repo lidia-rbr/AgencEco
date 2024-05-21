@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/8cf4993677.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 50);
+        });
+
+        let slideIndex = 1;
+        $(document).ready(function () { showSlides(slideIndex) });
+
+        /**
+        * Triggered on click on bar icon to display full menu
+        */
+        function displayMenu() {
+            let myLinks = $('#myLinks');
+            let myHeader = $('#myHeader');
+            let logo = $('#headerLogo');
+            let barIcon = $('#barIcon');
+            if (myLinks.css('display') === "block") {
+                closeToggledMenu();
+            } else {
+                myLinks.slideDown('fast');
+                logo.css('visibility', 'hidden');
+                barIcon.css('color', 'white');
+                myHeader.css('background-color', '#053B44');
+            }
+        }
+
+        /**
+         * Hide toggled menu and display header
+        */
+        function closeToggledMenu() {
+            let myLinks = $('#myLinks');
+            let myHeader = $('#myHeader');
+            let logo = $('#headerLogo');
+            let barIcon = $('#barIcon');
+            barIcon.css('color', '#053B44');
+            logo.css('visibility', 'visible');
+            myHeader.css('background-color', 'white');
+            myLinks.hide();
+        }
+
+        /**
+        * Reset form inputs and display message (demo purpose only)
+        */
+        function displayConfirmationMessage() {
+            $('input[type=text]').each(function () { $(this).val(''); });
+            window.alert("Message sent");
+        }
+
+        /**
+        * Display next slide of the slideshow
+        * @param {Number} n
+        */
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        /**
+        * Display previous slide of the slideshow
+        * @param {Number} n
+        */
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        /**
+        * Display slide n
+        * @param {Number} n
+        */
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            console.log(slideIndex)
+            console.log(slides);
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="myHeader" class="topnav">
+            <!-- href="#homeBanner" -->
+            <a class="topnav-left" href="#homeBanner"><img class="header-logo" id="headerLogo"
+                    src="./Pictures/logo.jpg"></a>
+            <div class="topnav-right completeNav">
+                <a href="#homeBanner"><b>Accueil</b></a>
+                <a href="#team"><b>Notre équipe</b></a>
+                <a href="#services"><b>Nos services</b></a>
+                <a href="#"><b>Témoignages</b></a>
+                <a href="#contact"><b>Contactez-nous</b></a>
+                <a href="#gallery"><b>Notre gallerie</b></a>
+            </div>
+            <!-- HAMBURGER MENU FOR SMALL SCREENS -->
+            <!-- Menu -->
+            <div class="topnav-right toggleMenu">
+                <a href="javascript:void(0);" class="icon" onclick="displayMenu()">
+                    <i id="barIcon" class="fa fa-bars">
+                    </i>
+                </a>
+            </div>
+        </div>
+        <div class="menu" id="myLinks">
+            <div class="toggleLinksContainer">
+                <a href="#homeBanner" onclick="closeToggledMenu()">Accueil</a>
+                <a href="#team" onclick="closeToggledMenu()">Notre équipe</a>
+                <a href="#services" onclick="closeToggledMenu()">Nos services</a>
+                <a href="#" onclick="closeToggledMenu()">Témoignages</a>
+                <a href="#contact" onclick="closeToggledMenu()">Contactez-nous</a>
+                <a href="#gallery" onclick="closeToggledMenu()">Notre gallerie</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="homeBanner">
+            <div class="bannerContainer">
+                <!-- <img src="./pictures/rodion-kutsaev-049M_crau5k-unsplash 1.jpg"></img> -->
+                <div class="title-position">
+                    <h2>Bienvenue dans votre</h2>
+                    <a href="./360.html" style="text-decoration: none;">
+                        <h1><b>Agence web écologique</b></h1>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="whiteSection" id="team">
+            <div class="team">
+                <h3 style="margin-bottom:2%">Notre équipe</h3>
+                <p class="team-text">
+                    <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore aut assumenda illo aperiam
+                        doloribus architecto incidunt, impedit temporibus aliquid labore ex rerum reiciendis quis
+                        laborum minus tempora obcaecati vero! Optio?
+                    </b>
+                </p>
+                <div class=" teamGridContainer">
+                    <div style="grid-row-start: 1;grid-column-start: 1;">
+                        <img class="teamPictures" src="./Pictures/image 1.jpg">
+                    </div>
+                    <div style="grid-row-start: 2;grid-column-start: 1;">
+                        <h5>Julie Dupond</h5>
+                        <div class="teamDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quam</div>
+                    </div>
+                    <div style="grid-row-start: 1;grid-column-start: 2;">
+                        <img class="teamPictures" src="./Pictures/image 2.jpg">
+                    </div>
+                    <div style="grid-row-start: 2;grid-column-start: 2;">
+                        <h5>Roméo Silva</h5>
+                        <div class="teamDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quam</div>
+                    </div>
+                    <div style="grid-row-start: 1;grid-column-start: 3;">
+                        <img class="teamPictures" src="./Pictures/image 3.jpg">
+                    </div>
+                    <div style="grid-row-start: 2;grid-column-start: 3;">
+                        <h5>Javier Bardem</h5>
+                        <div class="teamDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quam</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="kpi" id="kpi">
+            <div class="numbersGridContainer">
+                <div>
+                    <div class="kpiValue"><b>2500</b></div>
+                    <div class="kpiDescription">Clients satisfaits</div>
+                </div>
+                <div>
+                    <div class="kpiValue"><b>2500</b></div>
+                    <div class="kpiDescription">Clients satisfaits</div>
+                </div>
+                <div>
+                    <div class="kpiValue"><b>2500</b></div>
+                    <div class="kpiDescription">Clients satisfaits</div>
+                </div>
+                <div>
+                    <div class="kpiValue"><b>2500</b></div>
+                    <div class="kpiDescription">Clients satisfaits</div>
+                </div>
+            </div>
+
+        </section>
+        <section class="whiteSection" id="services">
+            <h3>Nos services</h3>
+            <div class="serviceGridContainer">
+                <div class="servicePictureContainer" style="grid-row: 1; grid-column: 2;">
+                    <img class="servicePictures" src="./Pictures/Vector-removebg-preview.png">
+                </div>
+                <div style="grid-row: 2; grid-column: 2;">
+                    <h6>Création de site web</h6>
+                </div>
+                <div class="servicePictureContainer" style="grid-row: 1; grid-column: 3;">
+                    <img class="servicePictures" src="./Pictures/Vector-1-removebg-preview.png">
+                </div>
+                <div style="grid-row: 2; grid-column: 3;">
+                    <h6>Audit qualité</h6>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <h3 style="color:var(--yellow);margin:5%">Contactez-nous</h3>
+            <p style="color:white; padding-bottom:4%">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <form id="contactForm">
+                <div class="contactFormGridContainer">
+                    <div class="formBox">
+                        <label for="fname">Nom:</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="formBox">
+                        <label for="fname">Catégorie :</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="formBox">
+                        <label for="fname">Téléphone :</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="formBox">
+                        <label for="fname">Ville :</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="oneFormBox">
+                        <label for="fname">Email :</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="messageBox">
+                        <label for="fname">Message :</label>
+                        <textarea rows="6"></textarea>
+                    </div>
+                    <div class="oneFormBox" style="text-align: right;align-content: center;">
+                        <!-- return false on click to prevent scroll top  -->
+                        <button id="submitButton" onclick="displayConfirmationMessage(); return false"
+                            class="button"><b>Envoyer</b></button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="whiteSection" id="aboutUs">
+            <div class="generalGridContainer">
+                <div class="generalBox">
+                    <img class="aboutUsPicture" src="./Pictures/jason-goodman-Oalh2MojUuk-unsplash 1.jpg">
+                </div>
+                <div class="generalBox generalBoxGrid">
+                    <h6>A propos de nous</h6>
+                    <div class="aboutUs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque cumd
+                        voluptatibus quibusdam rem, quos mollitia molestias non culpa nihil ab.</div>
+                    <div class="aboutUsGridContainer">
+                        <div class="logoContainer" style="grid-row-start: 1;grid-column-start: 1;">
+                            <img class="logo" src="./Pictures/Vector-2.jpg">
+                        </div>
+                        <div style="grid-row-start: 2;grid-column-start: 1;">
+                            <h7><b>Ecologique</b>
+                                <h7>
+                        </div>
+                        <div class="logoContainer" style="grid-row-start: 1;grid-column-start: 2;">
+                            <img class="logo" src="./Pictures/Vector-3.jpg">
+                        </div>
+                        <div style="grid-row-start: 2;grid-column-start: 2;">
+                            <h7><b>Responsable</b>
+                                <h7>
+                        </div>
+                        <div class="logoContainer" style="grid-row-start: 1;grid-column-start:3;">
+                            <img class="logo" src="./Pictures/Vector-4.jpg">
+                        </div>
+                        <div style="grid-row-start: 2;grid-column-start: 3;">
+                            <h7><b>24/7 assistance</b>
+                                <h7>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="whiteSection" id="gallery">
+            <h3 style="padding-bottom:2%;">Notre gallerie</h3>
+            <p><b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore aut assumenda illo aperiam doloribus
+                    architecto incidunt, impedit temporibus aliquid labore ex
+                </b></p>
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <img class="slideshow-image" src="./Pictures/kevin-bhagat-zNRITe8NPqY-unsplash 1.jpg">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="slideshow-image" src="./Pictures/jan-kopriva-WLzT6WG7JGQ-unsplash.jpg">
+                </div>
+
+                <div class="mySlides fade">
+                    <img class="slideshow-image" src="./Pictures/alexis-antoine-Xal6kYdK7rM-unsplash.jpg">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <div class="slideShowNavigationContainer">
+                    <div class="prev"> <a class="prevIcon" onclick="plusSlides(-1)">&#10094;</a></div>
+                    <div class="next"><a class="nextIcon" onclick="plusSlides(1)">&#10095;</a></div>
+                </div>
+            </div>
+            <br>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="footerGridContainer">
+                <div class="footerBox">
+                    <h7>Content</h7><br>
+                    <h8>idjzoij<br>jnezoi</h8>
+                </div>
+                <div class="footerBox">
+                    <h7>Information</h7><br>
+                    <h8>idjzoij<br>jnezoi</h8>
+                </div>
+                <div class="footerBox">
+                    <h7>Services</h7><br>
+                    <h8>idjzoij<br>jnezoi</h8>
+                </div>
+                <div class="footerBox">
+                    <h7>Aide</h7><br>
+                    <h8>idjzoij<br>jnezoi</h8>
+                </div>
+                <div class="footerBox">
+                    <div class="contactInfoContainer">
+                        <div style="grid-row: 1 / 3; text-align: right !important;margin-top: auto;;">
+                            <i class="fa fa-phone footerIcon"></i>
+                        </div>
+                        <div style="grid-row: 1 / 1; grid-column: 2/2;">
+                            <div class="contact-text">+33 00 00 00 00 00</div>
+                        </div>
+                        <div style="grid-row: 2 / 2; grid-column: 2/2;">
+                            <div class="contact-text">+33 00 00 00 00 00</div>
+                        </div>
+                        <div style="grid-row: 3 / 5; text-align: right !important;margin-top: auto;">
+                            <i class="fa fa-map-marker footerIcon"></i>
+                        </div>
+                        <div style="grid-row: 3 ; grid-column: 2/2;">
+                            <div class="contact-text"> 75000 Paris,</div>
+                        </div>
+                        <div style="grid-row: 4 ; grid-column: 2/2;">
+                            <div class="contact-text"> France</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section style="background-color: #032328;">
+            <div class="lastFooter">
+                <div class="lastFooter-left">
+                    <h8>Copyright 2021 AGENCECO - All rights reserved</h8>
+                </div>
+                <div class="lastFooter-right">
+                    <div class="socialMediaContainer">
+                        <div class="socialMediaIcon">
+                            <i class="fa fa-facebook"></i>
+                        </div>
+                        <div class="socialMediaIcon">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                        <div class="socialMediaIcon">
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

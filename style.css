@@ -1,0 +1,843 @@
+/* CUSTOM PROPERTIES */
+:root {
+    --background-dark: #053B44;
+    --text: #565E65;
+    --title-2: #029D5B;
+    --title: #1C2126;
+    --yellow: #D5F31F;
+}
+
+/* --------------GENERAL--------------- */
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 60px;
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-type: proximity;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: #053B44;
+    width: 100%;
+    margin: 0px;
+}
+
+body::-webkit-scrollbar {
+    display: none
+}
+
+.whiteSection {
+    background-color: white;
+    text-align: center;
+    padding: 3%
+}
+
+p {
+    font-size: 1.3vw;
+}
+
+h1 {
+    color: var(--yellow);
+    font-size: 6vw;
+    margin-top: 0px;
+    margin-bottom: 2%;
+}
+
+h2 {
+    color: white;
+    font-size: 4vw;
+    margin-bottom: 0px;
+}
+
+h3 {
+    color: var(--title-2);
+    font-size: 3vw;
+    margin: 0px;
+}
+
+h5 {
+    font-size: 1.4vw;
+    color: var(--grey);
+    margin: 0px;
+}
+
+h6 {
+    font-size: 1.8vw;
+}
+
+h7 {
+    font-size: 1vw;
+}
+
+h8 {
+    font-size: 10px;
+}
+
+/* ---------- TABLET ---------- */
+@media screen and (max-width: 1025px) and (min-width: 601px) {
+    p {
+        font-size: 1.7vw !important;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    h3 {
+        font-size: 4.5vw;
+    }
+
+    h5 {
+        font-size: 2vw;
+        margin: 0px;
+    }
+
+    h7 {
+        font-size: 1.4vw;
+    }
+
+    h8 {
+        font-size: 1vw;
+    }
+
+    .bannerContainer {
+        height: 70vh !important;
+    }
+
+    .teamGridContainer {
+        padding-top: 6%;
+        grid-template-rows: 16vw 10vw !important;
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+    }
+
+    .teamDescription {
+        font-size:1.3vw !important;
+    }
+
+    .numbersGridContainer {
+        grid-template-rows: 13vh !important;
+    }
+
+    .serviceGridContainer {
+        grid-template-rows: 35vw 9vw !important;
+    }
+
+    .servicePictureContainer {
+        height: 35vw !important;
+    }
+
+    .generalBox {
+        width: 100%;
+    }
+
+    .logoContainer {
+        height: 80% !important;
+    }
+
+    .footerGridContainer {
+        grid-template-rows: 19vh !important;
+    }
+
+    .contactInfoContainer {
+        grid-template-rows: repeat(4, 1.2vh) !important;
+        grid-row-gap: 0.8vh !important;
+        grid-template-columns: 1fr 6fr !important;
+    }
+
+    .contact-text {
+        font-size: 1.2vw !important;
+    }
+
+    .lastFooter {
+        height: 6vh !important;
+    }
+}
+
+/* ---------- PHONE ---------- */
+@media screen and (max-width: 600px) {
+    p {
+        font-size: 2vw !important;
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    h3 {
+        font-size: 4.5vw;
+    }
+
+    h5 {
+        font-size: 3.5vw;
+        margin: 0px;
+    }
+
+    h6 {
+        font-size: 2.5vw;
+    }
+
+    h7 {
+        font-size: 2.4vw;
+    }
+
+    h8 {
+        font-size: 1.2vw;
+    }
+
+    .bannerContainer {
+        height: 50vh !important;
+    }
+
+    .team-text {
+        width: 95% !important;
+        margin: auto;
+    }
+
+    .teamGridContainer {
+        padding-top: 10% !important;
+        grid-template-rows: 24vw 18Vw !important;
+        grid-row-gap: 4vh !important;
+        width: 95% !important;
+        margin: auto;
+    }
+
+    .teamDescription {
+        font-size:1.9vw !important;
+        width:80%;
+        margin: auto;
+    }
+
+    .numbersGridContainer {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-rows: 20vw 20vw !important;
+    }
+
+    .kpiValue {
+        font-size: 6vw !important;
+    }
+
+    .serviceGridContainer {
+        grid-template-rows: 35vw 16vw !important;
+        padding-top: 10% !important;
+    }
+
+    .servicePictureContainer {
+        height: 35vw !important;
+    }
+
+    .generalBox {
+        width: 80% !important;
+    }
+
+    .serviceGridContainer {
+        grid-template-rows: 32vw 10vw !important;
+    }
+
+    .formBox {
+        grid-column: 1 / 3 !important;
+    }
+
+    .logoContainer {
+        height: 80% !important;
+    }
+
+    .contact {
+        text-align: center;
+        padding: 10px;
+        max-width: 90% !important;
+        padding-left: 10% !important;
+    }
+
+    .contactInfoContainer {
+        grid-template-rows: repeat(4, 1.2vh) !important;
+        grid-row-gap: 0.8vh !important;
+        grid-template-columns: 2fr 4fr !important;
+    }
+
+    .contact-text {
+        font-size: 1.2vw !important;
+    }
+
+    .lastFooter {
+        height: 6vh !important;
+    }
+
+    .generalGridContainer {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 42vh 42vh;
+    }
+
+    .footerGridContainer {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-gap: 0px !important;
+        grid-template-rows: 15vh 15vh !important;
+        text-align: center;
+    }
+
+    .aboutUs-text {
+        font-size: 2.5vw !important;
+    }
+}
+
+/* ---------- TOGGLE MENU ---------- */
+@media screen and (min-width: 750px) {
+    .toggleMenu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .completeNav {
+        display: none;
+    }
+
+    .toggleMenu {
+        width: 6%;
+    }
+}
+
+/* --------------HEADER--------------- */
+.topnav-right {
+    float: right;
+    margin-right: 2%;
+}
+
+.topnav-left {
+    float: left;
+    margin-right: auto;
+    margin-left: 2%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.header-logo {
+    max-width: 100px;
+    vertical-align: middle;
+}
+
+.topnav {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    overflow: hidden;
+}
+
+.icon {
+    color: var(--text);
+}
+
+.completeNav a {
+    float: left;
+    text-align: center;
+    padding: 5% 8px;
+    text-decoration: none;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.2vw;
+    display: block;
+}
+
+#myLinks {
+    display: none;
+}
+
+.menu {
+    flex-direction: column;
+    background-color: var(--background-dark);
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 4% 4%;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+    color: var(--text)
+}
+
+.toggleLinksContainer {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px -24px;
+    padding-bottom: 4%;
+}
+
+.completeNav a:hover {
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+.nav {
+    margin-right: 2%;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+}
+
+.bannerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    background-image: url('./pictures/rodion-kutsaev-049M_crau5k-unsplash 1.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+/* --------------TEAM--------------- */
+.team-text {
+    width: 80%;
+    margin: auto;
+}
+
+.teamSection {
+    padding-left: 10%;
+    width: 90%;
+    height: 70vh
+}
+
+.teamGridContainer {
+    padding-top: 4%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 14vw 9vw;
+    grid-row-gap: 4vh;
+    width: 80%;
+    margin: auto;
+}
+
+.teamPictures {
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    height: -webkit-fill-available;
+    width: inherit;
+    max-width: 250px;
+}
+
+.teamDescription {
+    font-size:1vw;
+    padding-top: 6%;
+}
+
+/* --------------KPI--------------- */
+
+.numbersGridContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: min(10px);
+    grid-template-rows: 20vh;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.kpiDescription {
+    color: white;
+    margin-top: 0px;
+    font-size: 2vw;
+}
+
+.kpi {
+    text-align: center;
+    padding: 2%;
+}
+
+.kpiValue {
+    color: #D5F31F;
+    font-size: 3vw;
+    margin-bottom: 0px;
+}
+
+/* --------------Service--------------- */
+
+.serviceGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 27vw 5vw;
+    grid-column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 3%
+}
+
+.generalBoxGrid {
+    border: solid;
+    border-color: #053B44;
+    border-radius: 10px;
+    border-width: 1px;
+    display: grid;
+    grid-template-rows: 25% 20% 55%;
+    justify-items: center;
+    align-items: center;
+}
+
+.servicePictureContainer {
+    background: whitesmoke;
+    border-radius: 10px;
+    height: 27vw;
+    max-height: 350px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicePictures {
+    width: 8vw;
+    height: 8vw;
+}
+
+/* --------------Form--------------- */
+
+.contact {
+    text-align: center;
+    padding: 10px;
+    max-width: 80%;
+    padding-left: 20%;
+}
+
+.contactFormGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 0.8fr 0.8fr 2.6fr 0.8fr;
+    grid-column-gap: 20px;
+    text-align: left;
+}
+
+.formBox {
+    height: 60px;
+    text-align: left;
+}
+
+.oneFormBox {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 60px;
+    text-align: left;
+}
+
+.messageBox {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 110px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    height: 50%;
+    border-bottom: 1px solid #ffffff;
+    color: whitesmoke;
+}
+
+input:focus-visible {
+    outline-color: var(--yellow)
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 120px;
+    font-family: 'Poppins';
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    color: whitesmoke
+}
+
+textarea:focus-visible {
+    outline-color: var(--yellow)
+}
+
+/* input:-internal-autofill-selected {
+    background-color: #e7fc02 !important;
+} */
+
+label {
+    text-align: left;
+    color: white;
+    font-size: 13px;
+}
+
+.element {
+    margin: auto;
+}
+
+.title-position {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    text-align: right;
+    padding: 0%;
+}
+
+.button {
+    background-color: #D5F31F;
+    height: 40px;
+    width: 129px;
+    /* border-radius: 0%; */
+    border-radius: 22px;
+    border: none;
+    box-shadow: #053B44 0px 8px 24px;
+    color: #565E65;
+}
+
+/* --------------ABOUT US--------------- */
+
+.generalGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2%;
+    justify-items: center;
+}
+
+.generalBox {
+    width: 90%;
+}
+
+.aboutUs-text {
+    font-size: 1.2vw;
+}
+
+.aboutUsPicture {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.aboutUsGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60% 40%;
+    padding-top: 4%;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    grid-gap: 1%;
+    justify-content: center;
+}
+
+.logoContainer {
+    background: #fff;
+    border: 2px solid #565E65;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.logo {
+    margin: auto;
+    height: 3vh;
+}
+
+/* --------------GALLERY--------------- */
+
+.roundLogoBox {
+    height: 40px
+}
+
+img {
+    max-width: 100%;
+}
+
+.slideshow-container {
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+    padding-top: 4%;
+
+    @media screen and (max-width: 1024px) {
+        max-width: 80%
+    }
+}
+
+.mySlides {
+    display: none;
+}
+
+.slideShowNavigationContainer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+}
+
+.prev {
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    height: 30px;
+    display: flex
+}
+
+.next {
+    margin-left: auto;
+    border-color: var(--grey);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    height: 30px;
+    /* width:120px; */
+    /* background-color: #e3f0f2; */
+    display: flex
+}
+
+.nextIcon {
+    margin: auto;
+    color: var(--grey);
+}
+
+.prevIcon {
+    margin: auto;
+    color: var(--grey);
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--text);
+    color: whitesmoke;
+    cursor: pointer
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.slideshow-image {
+    object-fit: cover;
+    border-radius: 18px;
+
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* --------------FOOTER--------------- */
+
+.footerGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: min(10px);
+    grid-template-rows: 25vh;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.footerBox {
+    color: rgb(255, 255, 255);
+}
+
+.lastFooter {
+    color: rgb(232, 232, 232);
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.lastFooter-left {
+    float: left;
+}
+
+.lastFooter-right {
+    float: right;
+    margin-left: auto;
+}
+
+.contactInfoContainer {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(4, 1.5vh);
+    grid-column-gap: 1vw;
+    grid-row-gap: 1.2vh;
+    text-align: left;
+    /* align-items: center; */
+}
+
+.footerIcon {
+    color: var(--yellow);
+    font-size: 1vw;
+}
+
+.contact-text {
+    font-size: 0.8vw;
+    color: rgb(255, 255, 255);
+}
+
+.socialMediaContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 2vw);
+    column-gap: 5%;
+    margin: auto;
+}
+
+.socialMediaIcon {
+    color:white;
+    font-size: 1vw;
+    border: white;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 23%;
+    aspect-ratio: 1;
+    align-content: center;
+    text-align: center;
+}
