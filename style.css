@@ -244,6 +244,23 @@ h8 {
         width: 80% !important;
     }
 
+    .contactFormGridContainer {
+        grid-template-rows: 0.8fr 0.8fr 0.8fr 0.8fr 0.8fr 2.6fr 0.8fr !important;
+    }
+
+    .formBox {
+        height: 50px !important;
+    }
+
+    label {
+        font-size: 10px !important;
+    }
+
+    .button {
+        height: 30px !important;
+        width: 99px !important;
+    }
+
     .serviceGridContainer {
         grid-template-rows: 32vw 10vw !important;
     }
@@ -526,7 +543,7 @@ header {
 .contactFormGridContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.8fr 0.8fr 0.8fr 2.6fr 0.8fr;
+    grid-template-rows: 0.8fr 0.8fr 0.8fr 2.6fr  0.8fr;
     grid-column-gap: 20px;
     text-align: left;
 }
@@ -662,7 +679,7 @@ label {
 
 .logo {
     margin: auto;
-    height: 3vh;
+    height: 2vh;
 }
 
 /* --------------GALLERY--------------- */
