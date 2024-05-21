@@ -144,6 +144,10 @@ h8 {
     .logoContainer {
         height: 80% !important;
     }
+    
+    .logo {
+        height: 2vh !important;
+    }
 
     .footerGridContainer {
         grid-template-rows: 19vh !important;
@@ -271,6 +275,10 @@ h8 {
 
     .logoContainer {
         height: 80% !important;
+    }
+
+    .logo {
+        height: 2vh !important;
     }
 
     .contact {
@@ -679,7 +687,7 @@ label {
 
 .logo {
     margin: auto;
-    height: 2vh;
+    height: 3vh;
 }
 
 /* --------------GALLERY--------------- */
