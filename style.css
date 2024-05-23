@@ -79,6 +79,10 @@ h8 {
     font-size: 10px;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 /* ---------- TABLET ---------- */
 @media screen and (max-width: 1025px) and (min-width: 601px) {
     p {
@@ -382,6 +386,7 @@ header {
     text-decoration: none;
     font-size: 1.2vw;
     display: block;
+    font-weight: bold;
 }
 
 #myLinks {
@@ -424,6 +429,8 @@ header {
     background-color: var(--black);
 }
 
+/* --------------HOME--------------- */
+
 .bannerContainer {
     display: flex;
     justify-content: center;
@@ -435,10 +442,18 @@ header {
     height: 100vh;
 }
 
+.homeMainTitleLink {
+    text-decoration: none;
+}
+
 /* --------------TEAM--------------- */
 .team-text {
     width: 80%;
     margin: auto;
+}
+
+.teamTitle {
+    margin-bottom:2%
 }
 
 .teamSection {
@@ -455,6 +470,30 @@ header {
     grid-row-gap: 4vh;
     width: 80%;
     margin: auto;
+}
+
+.teamFirstPicture {
+    grid-row-start: 1;grid-column-start: 1;
+}
+
+.teamFirstDescription {
+    grid-row-start: 2;grid-column-start: 1;
+}
+
+.teamSecondPicture {
+    grid-row-start: 1;grid-column-start: 2;
+}
+
+.teamSecondDescription {
+    grid-row-start: 2;grid-column-start: 2;
+}
+
+.teamThirdPicture {
+    grid-row-start: 1;grid-column-start: 3;
+}
+
+.teamThirdDescription {
+    grid-row-start: 2;grid-column-start: 3;
 }
 
 .teamPictures {
@@ -498,6 +537,7 @@ header {
     color: #D5F31F;
     font-size: 3vw;
     margin-bottom: 0px;
+    font-weight: bold;
 }
 
 /* --------------Service--------------- */
@@ -539,7 +579,33 @@ header {
     height: 8vw;
 }
 
+.serviceFirstPicture {
+    grid-row: 1; grid-column: 2;
+}
+
+.serviceFirstDescription {
+    grid-row: 2; grid-column: 2;
+}
+
+.serviceSecondPicture {
+    grid-row: 1; grid-column: 3;
+}
+
+.serviceSecondDescription {
+    grid-row: 2; grid-column: 3;
+}
+
 /* --------------Form--------------- */
+
+.contactTitle {
+    color:var(--yellow);
+    margin:5%
+}
+
+.contactDescription {
+    color:white; 
+    padding-bottom:4%
+}
 
 .contact {
     text-align: center;
@@ -566,6 +632,11 @@ header {
     grid-column-end: 3;
     height: 60px;
     text-align: left;
+}
+
+.buttonBox {
+    text-align: right;
+    align-content: center;
 }
 
 .messageBox {
@@ -604,10 +675,6 @@ textarea:focus-visible {
     outline-color: var(--yellow)
 }
 
-/* input:-internal-autofill-selected {
-    background-color: #e7fc02 !important;
-} */
-
 label {
     text-align: left;
     color: white;
@@ -630,11 +697,11 @@ label {
     background-color: #D5F31F;
     height: 40px;
     width: 129px;
-    /* border-radius: 0%; */
     border-radius: 22px;
     border: none;
     box-shadow: #053B44 0px 8px 24px;
     color: #565E65;
+    font-weight: bold;
 }
 
 /* --------------ABOUT US--------------- */
@@ -690,10 +757,39 @@ label {
     height: 3vh;
 }
 
+.aboutUsFirstLogo {
+    grid-row-start: 1;grid-column-start: 1;
+}
+
+.aboutUsFirstDescription {
+    grid-row-start: 2;grid-column-start: 1;
+}
+
+.aboutUsSecondLogo {
+    grid-row-start: 1;grid-column-start: 2;
+}
+
+.aboutUsSecondDescription {
+    grid-row-start: 2;grid-column-start: 2;
+}
+
+.aboutUsThirdLogo {
+    grid-row-start: 1;grid-column-start:3;
+}
+
+.aboutUsThirdDescription {
+    grid-row-start: 2;grid-column-start: 3;
+}
+
 /* --------------GALLERY--------------- */
 
+/* 
 .roundLogoBox {
     height: 40px
+} */
+
+.galleryTitle{
+    padding-bottom:2%;
 }
 
 img {
@@ -808,6 +904,58 @@ img {
     color: rgb(255, 255, 255);
 }
 
+.contactInfoContainer {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(4, 1.5vh);
+    grid-column-gap: 1vw;
+    grid-row-gap: 1.2vh;
+    text-align: left;
+    /* align-items: center; */
+}
+
+.phoneIcon {
+    grid-row: 1 / 3; 
+    text-align: right !important;
+    margin-top: auto;
+}
+
+.firstPhoneNumber {
+    grid-row: 1 / 1; grid-column: 2/2;
+}
+
+.secondPhoneNumber {
+    grid-row: 2 / 2; grid-column: 2/2;
+}
+
+.mapIcon {
+    grid-row: 3 / 5; 
+    text-align: right !important;
+    margin-top: auto;
+}
+
+.addressFirstRow {
+    grid-row: 3 ; grid-column: 2/2;
+}
+
+.addressSecondRow {
+    grid-row: 4 ; grid-column: 2/2;
+}
+
+.footerIcon {
+    color: var(--yellow);
+    font-size: 1vw;
+}
+
+.contact-text {
+    font-size: 0.8vw;
+    color: rgb(255, 255, 255);
+}
+
+.lastFooterSection {
+    background-color: #032328;
+}
+
 .lastFooter {
     color: rgb(232, 232, 232);
     height: 10vh;
@@ -826,26 +974,6 @@ img {
 .lastFooter-right {
     float: right;
     margin-left: auto;
-}
-
-.contactInfoContainer {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(4, 1.5vh);
-    grid-column-gap: 1vw;
-    grid-row-gap: 1.2vh;
-    text-align: left;
-    /* align-items: center; */
-}
-
-.footerIcon {
-    color: var(--yellow);
-    font-size: 1vw;
-}
-
-.contact-text {
-    font-size: 0.8vw;
-    color: rgb(255, 255, 255);
 }
 
 .socialMediaContainer {

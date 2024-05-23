@@ -1,0 +1,49 @@
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin:0px;
+}
+
+.panorama {
+    margin: 0 auto;
+    cursor: all-scroll;
+    height: 100vh;
+    padding-bottom: 30%;
+    background-image: url("./Pictures/360\ landscape.jpg");
+    background-size: cover;
+    background-position: 50% 0;
+    transition: background-position 1s linear;
+}
+
+.fixed-text {
+    position: absolute;
+    font-size:7vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #D5F31F;
+    font-family: 'Poppins';
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: max-content;
+}
+
+.go-back {
+    position: absolute;
+    top:6%;
+    left:6%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins';
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    width: max-content;
+    background-color: rgba(255, 255, 255, 0.305);
+}
+
+a {
+    color: #D5F31F !important;
+    text-decoration: none;
+}

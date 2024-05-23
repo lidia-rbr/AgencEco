@@ -4,101 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8cf4993677.js" crossorigin="anonymous"></script>
+    <link href="360-style.css" rel="stylesheet">
+    <script src="./360-js.js"></script>
     <title>Document</title>
 
-    <style>
-        body {
-            height: 100vh;
-            overflow: hidden;
-            margin:0px;
-        }
-
-        .panorama {
-            margin: 0 auto;
-            cursor: all-scroll;
-            height: 100vh;
-            padding-bottom: 30%;
-            background-image: url("./Pictures/360\ landscape.jpg");
-            background-size: cover;
-            background-position: 50% 0;
-            transition: background-position 1s linear;
-        }
-
-        .fixed-text {
-            position: absolute;
-            font-size:7vw;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #D5F31F;
-            font-family: 'Poppins';
-            text-align: center;
-            padding: 10px;
-            border-radius: 5px;
-            width: max-content;
-        }
-
-        .go-back {
-            position: absolute;
-            top:6%;
-            left:6%;
-            transform: translate(-50%, -50%);
-            font-family: 'Poppins';
-            text-align: center;
-            padding: 10px;
-            border-radius: 5px;
-            width: max-content;
-            background-color: rgba(255, 255, 255, 0.305);
-        }
-
-        a {
-            color: #D5F31F !important;
-        }
-    </style>
-    <script>
-        $(document).ready(function () {
-            var $panorama = $('.panorama');
-            var isDragging = false;
-            var startX;
-            var currentBackgroundPosX = 0;
-
-            $panorama.on("mousedown", function (e) {
-                isDragging = true;
-                startX = e.clientX;
-                $panorama.css('cursor', 'grabbing');
-                e.preventDefault();  // Prevent text selection or other default behaviors
-            });
-
-            $(document).on("mousemove", function (e) {
-                if (isDragging) {
-                    var deltaX = e.clientX - startX;
-                    var newBackgroundPosX = currentBackgroundPosX + deltaX;
-                    $panorama.css('background-position', newBackgroundPosX + 'px 0');
-                }
-            });
-
-            $(document).on("mouseup", function (e) {
-                if (isDragging) {
-                    isDragging = false;
-                    $panorama.css('cursor', 'grab');
-                    currentBackgroundPosX += e.clientX - startX;
-                }
-            });
-
-            $panorama.on("dragstart", function (e) {
-                e.preventDefault();
-            });
-        });
-    </script>
 </head>
 
 <body>
     <div class="panorama" draggable="true">
         <div class="go-back">
-            <a href="./index.html" style="text-decoration: none;"><i class="fa fa-angle-left"></i>  Go back</a>
+            <a href="./index.html"><i class="fa fa-angle-left"></i>  Go back</a>
         </div>
         <div class="fixed-text">
             <b>Agence web écologique</b>
