@@ -10,7 +10,7 @@ body {
     cursor: all-scroll;
     height: 100vh;
     padding-bottom: 30%;
-    background-image: url("./Pictures/360\ landscape.jpg");
+    background-image: url("./Pictures/360-landscape.jpg");
     background-size: cover;
     background-position: 50% 0;
     transition: background-position 1s linear;
