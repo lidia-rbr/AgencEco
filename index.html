@@ -2,37 +2,31 @@
 <html lang="fr">
 
 <head>
-    <title>Mon agence éco</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/Pictures/uncroppedLogo.png?">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon agence éco</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/Pictures/uncroppedLogo.png">
     <link href="style.css" rel="stylesheet">
-    <script src="./index-js.js"></script>
+    <script src="./index-js.js" defer></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/8cf4993677.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8cf4993677.js" crossorigin="anonymous" defer></script>
 </head>
 
 <body>
     <header>
         <div id="myHeader" class="topnav">
-            <!-- href="#homeBanner" -->
-            <a class="topnav-left" href="#homeBanner"><img class="header-logo" id="headerLogo"
-                    src="./Pictures/logo.jpg" alt="header-logo"></a>
+            <a class="topnav-left" href="#homeBanner"><img class="header-logo" id="headerLogo" src="./Pictures/logo.jpg" alt="Logo de l'agence"></a>
             <div class="topnav-right completeNav">
                 <a href="#homeBanner">Accueil</a>
                 <a href="#team">Notre équipe</a>
                 <a href="#services">Nos services</a>
                 <a href="#">Témoignages</a>
                 <a href="#contact">Contactez-nous</a>
-                <a href="#gallery">Notre gallerie</a>
+                <a href="#gallery">Notre galerie</a>
             </div>
-            <!-- HAMBURGER MENU FOR SMALL SCREENS -->
-            <!-- Menu -->
             <div class="topnav-right toggleMenu">
                 <a href="javascript:void(0);" class="icon" onclick="displayMenu()">
-                    <i id="barIcon" class="fa fa-bars">
-                    </i>
+                    <i id="barIcon" class="fa fa-bars"></i>
                 </a>
             </div>
         </div>
@@ -43,7 +37,7 @@
                 <a href="#services" onclick="closeToggledMenu()">Nos services</a>
                 <a href="#" onclick="closeToggledMenu()">Témoignages</a>
                 <a href="#contact" onclick="closeToggledMenu()">Contactez-nous</a>
-                <a href="#gallery" onclick="closeToggledMenu()">Notre gallerie</a>
+                <a href="#gallery" onclick="closeToggledMenu()">Notre galerie</a>
             </div>
         </div>
     </header>
@@ -62,27 +56,25 @@
             <div class="team">
                 <h3 class="teamTitle">Notre équipe</h3>
                 <p class="team-text bold">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore aut assumenda illo aperiam
-                        doloribus architecto incidunt, impedit temporibus aliquid labore ex rerum reiciendis quis
-                        laborum minus tempora obcaecati vero! Optio?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore aut assumenda illo aperiam doloribus architecto incidunt, impedit temporibus aliquid labore ex rerum reiciendis quis laborum minus tempora obcaecati vero! Optio?
                 </p>
-                <div class=" teamGridContainer">
+                <div class="teamGridContainer">
                     <div class="teamFirstPicture">
-                        <img class="teamPictures" src="./Pictures/image-1.jpg" alt="teamFirstPicture">
+                        <img class="teamPictures" src="./Pictures/image-1.jpg" alt="Julie Dupond">
                     </div>
                     <div class="teamFirstDescription">
                         <h5>Julie Dupond</h5>
                         <div class="teamDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quam</div>
                     </div>
                     <div class="teamSecondPicture">
-                        <img class="teamPictures" src="./Pictures/image-2.jpg" alt="teamSecondPicture">
+                        <img class="teamPictures" src="./Pictures/image-2.jpg" alt="Roméo Silva">
                     </div>
                     <div class="teamSecondDescription">
                         <h5>Roméo Silva</h5>
                         <div class="teamDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quam</div>
                     </div>
                     <div class="teamThirdPicture">
-                        <img class="teamPictures" src="./Pictures/image-3.jpg" alt="teamThirdPicture">
+                        <img class="teamPictures" src="./Pictures/image-3.jpg" alt="Javier Bardem">
                     </div>
                     <div class="teamThirdDescription">
                         <h5>Javier Bardem</h5>
@@ -115,13 +107,13 @@
             <h3>Nos services</h3>
             <div class="serviceGridContainer">
                 <div class="servicePictureContainer serviceFirstPicture">
-                    <img class="servicePictures" src="./Pictures/Vector-removebg-preview.png" alt="serviceFirstPicture">
+                    <img class="servicePictures" src="./Pictures/Vector-removebg-preview.png" alt="Création de site web">
                 </div>
                 <div class="serviceFirstDescription">
                     <h6>Création de site web</h6>
                 </div>
                 <div class="servicePictureContainer serviceSecondPicture">
-                    <img class="servicePictures" src="./Pictures/Vector-1-removebg-preview.png" alt="serviceSecondPicture">
+                    <img class="servicePictures" src="./Pictures/Vector-1-removebg-preview.png" alt="Audit qualité">
                 </div>
                 <div class="serviceSecondDescription">
                     <h6>Audit qualité</h6>
@@ -134,33 +126,31 @@
             <form id="contactForm">
                 <div class="contactFormGridContainer">
                     <div class="formBox">
-                        <label>Nom:</label>
-                        <input type="text">
+                        <label for="nom">Nom:</label>
+                        <input type="text" id="nom" name="nom">
                     </div>
                     <div class="formBox">
-                        <label>Catégorie :</label>
-                        <input type="text">
+                        <label for="categorie">Catégorie :</label>
+                        <input type="text" id="categorie" name="categorie">
                     </div>
                     <div class="formBox">
-                        <label>Téléphone :</label>
-                        <input type="text">
+                        <label for="telephone">Téléphone :</label>
+                        <input type="text" id="telephone" name="telephone">
                     </div>
                     <div class="formBox">
-                        <label>Ville :</label>
-                        <input type="text">
+                        <label for="ville">Ville :</label>
+                        <input type="text" id="ville" name="ville">
                     </div>
                     <div class="oneFormBox">
-                        <label>Email :</label>
-                        <input type="text">
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email">
                     </div>
                     <div class="messageBox">
-                        <label>Message :</label>
-                        <textarea rows="6"></textarea>
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="6"></textarea>
                     </div>
                     <div class="oneFormBox buttonBox">
-                        <!-- return false on click to prevent scroll top  -->
-                        <button id="submitButton" onclick="displayConfirmationMessage(); return false"
-                            class="button">Envoyer</button>
+                        <button id="submitButton" onclick="displayConfirmationMessage(); return false" class="button">Envoyer</button>
                     </div>
                 </div>
             </form>
@@ -168,87 +158,73 @@
         <section class="whiteSection" id="aboutUs">
             <div class="generalGridContainer">
                 <div class="generalBox">
-                    <img class="aboutUsPicture" src="./Pictures/jason-goodman-Oalh2MojUuk-unsplash1.jpg" alt="aboutUsPicture">
+                    <img class="aboutUsPicture" src="./Pictures/jason-goodman-Oalh2MojUuk-unsplash1.jpg" alt="A propos de nous">
                 </div>
                 <div class="generalBox generalBoxGrid">
                     <h6>A propos de nous</h6>
-                    <div class="aboutUs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque cumd
-                        voluptatibus quibusdam rem, quos mollitia molestias non culpa nihil ab.</div>
+                    <div class="aboutUs-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque cumd voluptatibus quibusdam rem, quos mollitia molestias non culpa nihil ab.</div>
                     <div class="aboutUsGridContainer">
                         <div class="logoContainer aboutUsFirstLogo">
-                            <img class="logo" src="./Pictures/Vector-2.jpg"  alt="aboutUsFirstLogo">
+                            <img class="logo" src="./Pictures/Vector-2.jpg" alt="Ecologique">
                         </div>
                         <div class="aboutUsFirstDescription">
-                            <h7 class="bold">Ecologique
-                            </h7>
+                            <p class="bold">Ecologique</p>
                         </div>
                         <div class="logoContainer aboutUsSecondLogo">
-                            <img class="logo" src="./Pictures/Vector-3.jpg" alt="aboutUsSecondLogo">
+                            <img class="logo" src="./Pictures/Vector-3.jpg" alt="Responsable">
                         </div>
                         <div class="aboutUsSecondDescription">
-                            <h7 class="bold">Responsable
-                            </h7>
+                            <p class="bold">Responsable</p>
                         </div>
                         <div class="logoContainer aboutUsThirdLogo">
-                            <img class="logo" src="./Pictures/Vector-4.jpg" alt="aboutUsThirdLogo">
+                            <img class="logo" src="./Pictures/Vector-4.jpg" alt="24/7 assistance">
                         </div>
                         <div class="aboutUsThirdDescription">
-                            <h7 class="bold">24/7 assistance
-                            </h7>
+                            <p class="bold">24/7 assistance</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="whiteSection" id="gallery">
-            <h3 class="galleryTitle">Notre gallerie</h3>
-            <p class="bold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore aut assumenda illo aperiam doloribus
-                    architecto incidunt, impedit temporibus aliquid labore ex
-                </p>
+            <h3 class="galleryTitle">Notre galerie</h3>
+            <p class="bold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore aut assumenda illo aperiam doloribus architecto incidunt, impedit temporibus aliquid labore ex.</p>
 
-            <!-- Slideshow container -->
             <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
-                    <img class="slideshow-image" src="./Pictures/kevin-bhagat-zNRITe8NPqY-unsplash1.jpg" alt="slideshow-image">
+                    <img class="slideshow-image" src="./Pictures/kevin-bhagat-zNRITe8NPqY-unsplash1.jpg" alt="Image de la galerie 1">
                 </div>
-
                 <div class="mySlides fade">
-                    <img class="slideshow-image" src="./Pictures/jan-kopriva-WLzT6WG7JGQ-unsplash.jpg" alt="slideshow-image">
+                    <img class="slideshow-image" src="./Pictures/jan-kopriva-WLzT6WG7JGQ-unsplash.jpg" alt="Image de la galerie 2">
                 </div>
-
                 <div class="mySlides fade">
-                    <img class="slideshow-image" src="./Pictures/alexis-antoine-Xal6kYdK7rM-unsplash.jpg" alt="slideshow-image">
+                    <img class="slideshow-image" src="./Pictures/alexis-antoine-Xal6kYdK7rM-unsplash.jpg" alt="Image de la galerie 3">
                 </div>
-
-                <!-- Next and previous buttons -->
                 <div class="slideShowNavigationContainer">
-                    <div class="prev"> <a class="prevIcon" onclick="plusSlides(-1)">&#10094;</a></div>
+                    <div class="prev"><a class="prevIcon" onclick="plusSlides(-1)">&#10094;</a></div>
                     <div class="next"><a class="nextIcon" onclick="plusSlides(1)">&#10095;</a></div>
                 </div>
             </div>
-            <br>
         </section>
     </main>
     <footer>
         <section>
             <div class="footerGridContainer">
                 <div class="footerBox">
-                    <h7>Content</h7><br>
-                    <h8>idjzoij<br>jnezoi</h8>
+                    <p class="footerText">Content</p>
+                    <p class="footerSmallText">idjzoij<br>jnezoi</p>
                 </div>
                 <div class="footerBox">
-                    <h7>Information</h7><br>
-                    <h8>idjzoij<br>jnezoi</h8>
+                    <p class="footerText">Information</p>
+                    <p class="footerSmallText">idjzoij<br>jnezoi</p>
                 </div>
                 <div class="footerBox">
-                    <h7>Services</h7><br>
-                    <h8>idjzoij<br>jnezoi</h8>
+                    <p class="footerText">Services</p>
+                    <p class="footerSmallText">idjzoij<br>jnezoi</p>
                 </div>
                 <div class="footerBox">
-                    <h7>Aide</h7><br>
-                    <h8>idjzoij<br>jnezoi</h8>
+                    <p class="footerText">Aide</p>
+                    <p class="footerSmallText">idjzoij<br>jnezoi</p>
                 </div>
                 <div class="footerBox">
                     <div class="contactInfoContainer">
@@ -265,20 +241,19 @@
                             <i class="fa fa-map-marker footerIcon"></i>
                         </div>
                         <div class="addressFirstRow">
-                            <div class="contact-text"> 75000 Paris,</div>
+                            <div class="contact-text">75000 Paris,</div>
                         </div>
                         <div class="addressSecondRow">
-                            <div class="contact-text"> France</div>
+                            <div class="contact-text">France</div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
         <section class="lastFooterSection">
             <div class="lastFooter">
                 <div class="lastFooter-left">
-                    <h8>Copyright 2021 AGENCECO - All rights reserved</h8>
+                    <p  class="footerSmallText">Copyright 2021 AGENCECO - All rights reserved</p>
                 </div>
                 <div class="lastFooter-right">
                     <div class="socialMediaContainer">

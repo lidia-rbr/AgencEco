@@ -71,14 +71,6 @@ h6 {
     font-size: 1.8vw;
 }
 
-h7 {
-    font-size: 1vw;
-}
-
-h8 {
-    font-size: 10px;
-}
-
 .bold {
     font-weight: bold;
 }
@@ -104,14 +96,6 @@ h8 {
     h5 {
         font-size: 2vw;
         margin: 0px;
-    }
-
-    h7 {
-        font-size: 1.4vw;
-    }
-
-    h8 {
-        font-size: 1vw;
     }
 
     .bannerContainer {
@@ -157,6 +141,14 @@ h8 {
         grid-template-rows: 19vh !important;
     }
 
+    .footerText {
+        font-size: 1.4vw;
+    }
+    
+    .footerSmallText {
+        font-size: 1vw;
+    }
+
     .contactInfoContainer {
         grid-template-rows: repeat(4, 1.2vh) !important;
         grid-row-gap: 0.8vh !important;
@@ -197,14 +189,6 @@ h8 {
 
     h6 {
         font-size: 2.5vw;
-    }
-
-    h7 {
-        font-size: 2.4vw;
-    }
-
-    h8 {
-        font-size: 1.2vw;
     }
 
     .bannerContainer {
@@ -304,6 +288,10 @@ h8 {
 
     .lastFooter {
         height: 6vh !important;
+    }
+
+    .footerText {
+        font-size: 2.4vw;
     }
 
     .generalGridContainer {
@@ -801,10 +789,7 @@ img {
     position: relative;
     margin: auto;
     padding-top: 4%;
-
-    @media screen and (max-width: 1024px) {
-        max-width: 80%
-    }
+    padding-bottom: 4%;
 }
 
 .mySlides {
@@ -993,4 +978,12 @@ img {
     aspect-ratio: 1;
     align-content: center;
     text-align: center;
+}
+
+.footerText {
+    font-size: 1vw;
+}
+
+.footerSmallText {
+    font-size: 10px;
 }
