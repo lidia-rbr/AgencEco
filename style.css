@@ -15,7 +15,7 @@ html {
     scroll-padding-top: 60px;
 }
 
-section {
+.anchor {
     scroll-snap-align: start;
     scroll-snap-type: proximity;
     scroll-behavior: smooth;
@@ -937,28 +937,28 @@ img {
     color: rgb(255, 255, 255);
 }
 
-.lastFooterSection {
-    background-color: #032328;
-}
-
 .lastFooter {
     color: rgb(232, 232, 232);
+    width:100%;
     height: 10vh;
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
     align-items: center;
-    width: 80%;
+
     margin: auto;
+    background-color: #032328;
 }
 
 .lastFooter-left {
     float: left;
+    padding-left: 3%;
 }
 
 .lastFooter-right {
     float: right;
     margin-left: auto;
+    padding-right: 3%;
 }
 
 .socialMediaContainer {
